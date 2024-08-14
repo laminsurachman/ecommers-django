@@ -1,10 +1,10 @@
 import React from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 function Header() {
   return (
-    <div>
+    <>
       <header>
-        {" "}
         <Navbar
           expand="lg"
           bg="dark"
@@ -13,23 +13,29 @@ function Header() {
           className="bg-body-tertiary"
         >
           <Container>
-            <Navbar.Brand href="/">Fazar Shop</Navbar.Brand>
+            <LinkContainer to="/">
+              <Navbar.Brand>Fazar Shop</Navbar.Brand>
+            </LinkContainer>
+
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
-                <Nav.Link href="/cart">
-                  <i className="fa fa-shopping-cart"> </i>CART
-                </Nav.Link>
-                <Nav.Link href="/login">
-                  <i className="fa fa-user"></i>LOGIN
-                </Nav.Link>
+                <LinkContainer to="/cart">
+                  <Nav.Link>
+                    <i className="fa fa-shopping-cart"> </i>CART
+                  </Nav.Link>
+                </LinkContainer>
+                <LinkContainer to="/login">
+                  <Nav.Link>
+                    <i className="fa fa-user"></i>LOGIN
+                  </Nav.Link>
+                </LinkContainer>
               </Nav>
             </Navbar.Collapse>
           </Container>
         </Navbar>
       </header>
-    </div>
+    </>
   );
 }
-
 export default Header;
