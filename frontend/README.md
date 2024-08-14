@@ -68,3 +68,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Backend Build
+
+ecommers-react-django>pip list
+ecommers-react-django>pip install virtualenv
+ecommers-react-django>virtualenv myenv
+ecommers-react-django>myenv\scripts\activate
+ecommers-react-django>pip install django
+ecommers-react-django>django-admin startproject backend
+ecommers-react-django\backend>python manage.py runserver
